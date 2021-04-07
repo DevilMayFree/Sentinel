@@ -6,6 +6,8 @@ fork from https://github.com/jiajiangnan/Sentinel
 
 默认使用nacos模式
 
+修改配置原因:datasource.provider命名太长，运行报错
+
 配置修改:
 ```properties
 ds.pr=nacos
