@@ -19,9 +19,9 @@ public abstract class AbstractpersistentRuleApiClient<T> implements PersistentRu
     @Override
     public boolean publishReturnBoolean(String app, RuleConfigTypeEnum configType, List<T> rules) {
         try {
+            logger.info("AbstractpersistentRuleApiClient publishReturnBoolean");
             this.publish(app, configType, rules);
         } catch (Exception ex) {
-
             logger.warn("setRules API failed: {}", configType.getValue(), ex);
             return false;
         }

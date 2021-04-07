@@ -12,16 +12,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class DataSourceProperties {
 
-    public static final String PREFIX_DATASOURCE = "datasource";
-    public static final String NAME_PROVIDER = "provider";
+    public static final String PREFIX_DATASOURCE = "ds";
+    public static final String NAME_PROVIDER = "pr";
 
     public static final String VALUE_PROVIDER_MEMORY = "memory";
     public static final String VALUE_PROVIDER_APOLLO = "apollo";
     public static final String VALUE_PROVIDER_NACOS = "nacos";
     public static final String VALUE_PROVIDER_ZOOKEEPER = "zookeeper";
 
-    @Value("${datasource.provider:memory}")
-    private String provider;
+    @Value("${ds.pr:nacos}")
+    private String provider = VALUE_PROVIDER_NACOS;
 
     public String getProvider() {
         return provider;

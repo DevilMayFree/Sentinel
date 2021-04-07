@@ -12,19 +12,19 @@ import org.springframework.stereotype.Component;
 @Component
 public class NacosProperties {
 
-    @Value("${datasource.provider.nacos.server-addr:localhost:8848}")
+    @Value("${ds.pr.nacos.server-addr:localhost:8848}")
     private String serverAddr;
 
-    @Value("${datasource.provider.nacos.username:}")
+    @Value("${ds.pr.nacos.username:nacos}")
     private String username;
 
-    @Value("${datasource.provider.nacos.password:}")
+    @Value("${ds.pr.nacos.password:nacos}")
     private String password;
 
-    @Value("${datasource.provider.nacos.namespace:}")
+    @Value("${ds.pr.nacos.namespace:}")
     private String namespace;
 
-    @Value("${datasource.provider.nacos.group-id:SENTINEL_GROUP}")
+    @Value("${ds.pr.nacos.group-id:SENTINEL_GROUP}")
     private String groupId;
 
     public String getServerAddr() {

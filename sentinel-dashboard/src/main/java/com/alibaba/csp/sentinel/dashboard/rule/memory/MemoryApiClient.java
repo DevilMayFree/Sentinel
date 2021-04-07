@@ -1,16 +1,10 @@
 package com.alibaba.csp.sentinel.dashboard.rule.memory;
 
 import com.alibaba.csp.sentinel.dashboard.datasource.RuleConfigTypeEnum;
-import com.alibaba.csp.sentinel.dashboard.datasource.ds.nacos.NacosProperties;
 import com.alibaba.csp.sentinel.dashboard.rule.AbstractpersistentRuleApiClient;
-import com.alibaba.csp.sentinel.util.AssertUtil;
-import com.alibaba.csp.sentinel.util.StringUtil;
-import com.alibaba.fastjson.JSON;
-import com.alibaba.nacos.api.config.ConfigService;
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,17 +18,16 @@ import java.util.List;
  * @Version 1.0
  */
 public class MemoryApiClient<T> extends AbstractpersistentRuleApiClient<T> {
+    private static final Logger log = LoggerFactory.getLogger(MemoryApiClient.class);
 
-
-    @Deprecated
     @Override
     public List<T> fetch(String app, RuleConfigTypeEnum configType) throws Exception {
+        log.info("MemoryApiClient fetch");
         return null;
     }
 
-    @Deprecated
     @Override
     public void publish(String app, RuleConfigTypeEnum configType, List<T> rules) throws Exception {
-
+        log.info("MemoryApiClient publish");
     }
 }
