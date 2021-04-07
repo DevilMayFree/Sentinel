@@ -29,7 +29,7 @@ services:
     restart: always
     # restart: on-failure
     environment:
-      - JAVA_OPTS=-Dserver.port=8858 -Dcsp.sentinel.dashboard.server=localhost:8858 -Dsentinel.dashboard.auth.username=sentinel -Dsentinel.dashboard.auth.password=hrk2020!! -Dproject.name=sentinel-dashboard
+      - JAVA_OPTS=-Dserver.port=8858 -Dcsp.sentinel.dashboard.server=localhost:8858 -Dsentinel.dashboard.auth.username=sentinel -Dsentinel.dashboard.auth.password=sentinel -Dproject.name=sentinel-dashboard
       # 填写nacos的ip，即是是本机也不使用localhost | 127.0.0.1
       - NACOS_SERVER_ADDR=192.168.2.105:8848
       - NACOS_USERNAME=nacos
